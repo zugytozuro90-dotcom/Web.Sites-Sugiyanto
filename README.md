@@ -2,7 +2,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sugiyanto | Website Pribadi</title>
+<title>Profil Sugiyanto</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -10,29 +12,30 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Segoe UI, sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#ffffff;
+background:linear-gradient(135deg,#3a7bd5,#00d2ff);
 color:#333;
 }
 
-/* Navbar */
+/* NAVBAR */
 
 nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 10%;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
+background:white;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
 position:sticky;
 top:0;
-background:white;
+z-index:100;
 }
 
 nav h2{
-font-weight:600;
+color:#3a7bd5;
 }
 
 nav ul{
@@ -50,76 +53,122 @@ color:#333;
 font-weight:500;
 }
 
-/* Hero */
+/* HERO */
 
 .hero{
-height:80vh;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-flex-direction:column;
+height:90vh;
+color:white;
 padding:20px;
 }
 
+.hero img{
+width:160px;
+height:160px;
+border-radius:50%;
+border:5px solid white;
+margin-bottom:20px;
+animation:float 3s infinite ease-in-out;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0);}
+}
+
 .hero h1{
-font-size:48px;
+font-size:42px;
 margin-bottom:10px;
 }
 
 .hero p{
-color:#666;
-margin-bottom:25px;
+font-size:18px;
+opacity:0.9;
 }
 
-.hero button{
-padding:12px 25px;
-border:none;
-background:#111;
-color:white;
-border-radius:30px;
-cursor:pointer;
-font-size:16px;
-}
-
-/* Section */
+/* SECTION */
 
 .section{
 padding:80px 10%;
+background:white;
 }
 
 .section h2{
 text-align:center;
 margin-bottom:40px;
 font-size:32px;
+color:#3a7bd5;
 }
 
-/* Card */
+/* CARD */
 
 .card-container{
 display:flex;
+flex-wrap:wrap;
 justify-content:center;
 gap:30px;
-flex-wrap:wrap;
 }
 
 .card{
-background:#fafafa;
-padding:30px;
+background:#f8f8f8;
+padding:25px;
 border-radius:12px;
-max-width:300px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
-text-align:center;
+width:280px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.3s;
 }
 
-/* Footer */
+.card:hover{
+transform:translateY(-10px);
+}
+
+/* BUTTON */
+
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:10px 20px;
+background:#3a7bd5;
+color:white;
+text-decoration:none;
+border-radius:25px;
+font-size:14px;
+}
+
+/* FOOTER */
 
 footer{
 text-align:center;
 padding:30px;
-background:#f5f5f5;
-margin-top:40px;
-color:#777;
+background:#222;
+color:white;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:30px;
+}
+
+.card{
+width:100%;
+}
+
+nav{
+flex-direction:column;
+}
+
+nav ul{
+margin-top:10px;
+}
+
 }
 
 </style>
@@ -128,30 +177,43 @@ color:#777;
 <body>
 
 <nav>
-<h2>Sugiyanto</h2>
+<h2>SUGIYANTO</h2>
 <ul>
 <li><a href="#about">Tentang</a></li>
-<li><a href="#hobi">Hobi</a></li>
-<li><a href="#kontak">Kontak</a></li>
+<li><a href="#biodata">Biodata</a></li>
+<li><a href="#contact">Kontak</a></li>
 </ul>
 </nav>
 
 <section class="hero">
-<h1>Halo, Saya Sugiyanto</h1>
-<p>Karyawan Swasta & Pecinta Touring</p>
-<button>Lihat Profil</button>
+
+<img src="https://i.imgur.com/4Z7K6Kk.png">
+
+<h1>Sugiyanto</h1>
+<p>Karyawan Swasta | Pecinta Touring Motor</p>
+
 </section>
 
 <section class="section" id="about">
+
 <h2>Tentang Saya</h2>
 
 <div class="card-container">
 
 <div class="card">
 <p>
-Saya adalah seorang karyawan swasta yang memiliki ketertarikan
-pada perjalanan dan petualangan. Saya menikmati perjalanan jauh
-untuk mengeksplorasi tempat baru.
+Halo! Saya Sugiyanto, biasa dipanggil Sugi.
+Saya bekerja sebagai karyawan swasta dan memiliki hobi
+touring motor untuk menikmati perjalanan dan menjelajahi
+tempat-tempat baru.
+</p>
+</div>
+
+<div class="card">
+<p>
+Website ini dibuat sebagai profil pribadi yang berisi
+informasi singkat tentang diri saya, biodata, serta
+kontak yang dapat dihubungi.
 </p>
 </div>
 
@@ -159,30 +221,66 @@ untuk mengeksplorasi tempat baru.
 
 </section>
 
-<section class="section" id="hobi">
-<h2>Hobi</h2>
+<section class="section" id="biodata">
+
+<h2>Biodata</h2>
 
 <div class="card-container">
 
 <div class="card">
-<h3>Touring</h3>
-<p>
-Touring adalah hobi yang membuat saya bisa menikmati perjalanan,
-melihat pemandangan baru, dan merasakan kebebasan di jalan.
-</p>
+<strong>Nama</strong>
+<p>Sugiyanto</p>
+</div>
+
+<div class="card">
+<strong>Panggilan</strong>
+<p>Sugi</p>
+</div>
+
+<div class="card">
+<strong>Profesi</strong>
+<p>Karyawan Swasta</p>
+</div>
+
+<div class="card">
+<strong>Tempat, Tanggal Lahir</strong>
+<p>Sukoharjo, 03 Agustus 1989</p>
+</div>
+
+<div class="card">
+<strong>Hobi</strong>
+<p>Touring Motor</p>
+</div>
+
+<div class="card">
+<strong>Alamat</strong>
+<p>Karangasem RT 02/04, Kel. Gumpang,
+Kec. Kartasura, Kab. Sukoharjo,
+Jawa Tengah</p>
 </div>
 
 </div>
 
 </section>
 
-<section class="section" id="kontak">
+<section class="section" id="contact">
+
 <h2>Kontak</h2>
 
 <div class="card-container">
 
 <div class="card">
-<p>Email : sugytozuro90@gmail.com</p>
+<p>Email</p>
+<a class="btn" href="mailto:zugytozuro90@gmail.com">
+Kirim Email
+</a>
+</div>
+
+<div class="card">
+<p>Telepon</p>
+<a class="btn" href="tel:+6285724000073">
+Hubungi Saya
+</a>
 </div>
 
 </div>
@@ -190,8 +288,9 @@ melihat pemandangan baru, dan merasakan kebebasan di jalan.
 </section>
 
 <footer>
-© 2026 Sugiyanto - Website Pribadi
+© 2026 Website Profil Sugiyanto
 </footer>
 
 </body>
 </html>
+
