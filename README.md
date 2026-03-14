@@ -196,4 +196,3 @@ melihat pemandangan baru, dan merasakan kebebasan di jalan.
 
 </body>
 </html>
-```
